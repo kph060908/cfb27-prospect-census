@@ -10,7 +10,7 @@ class, 4,100 recruits) into a fixed, checked data format, with an AI agent doing
 2. Paste this prompt with your details filled in:
 
    ```
-   Follow LLM_INSTRUCTIONS.md in https://github.com/kpholloway/cfb27-prospect-census to capture my league's recruit class.
+   Follow LLM_INSTRUCTIONS.md in https://github.com/kph060908/cfb27-prospect-census to capture my league's recruit class.
    League name: <your online dynasty's name>
    Platform: <PS5 / Xbox Series X|S / PC>
    The game shows on this computer through: <chiaki-ng / PS Remote Play / Xbox app / capture card in OBS / the PC game>

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/kpholloway/cfb27-prospect-census/schema/capture.schema.json",
+  "$id": "https://github.com/kph060908/cfb27-prospect-census/schema/capture.schema.json",
   "title": "capture.json (cfb27-prospect-census/1)",
   "type": "object",
   "required": ["format", "league", "team", "platform", "capture_mode", "season", "class_year", "stage", "captured_on",

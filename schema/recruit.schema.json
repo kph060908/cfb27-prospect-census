@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/kpholloway/cfb27-prospect-census/schema/recruit.schema.json",
+  "$id": "https://github.com/kph060908/cfb27-prospect-census/schema/recruit.schema.json",
   "title": "One line of recruits.jsonl (cfb27-prospect-census/1)",
   "type": "object",
   "required": ["national_rank", "state_rank", "position_rank", "first_name", "last_name", "stars", "position",

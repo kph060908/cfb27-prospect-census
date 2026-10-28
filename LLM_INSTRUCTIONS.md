@@ -66,7 +66,7 @@ anything, then follow it in order. [README.md](README.md) is for the human; this
 Python 3.10 to 3.13. From a folder of the player's choosing:
 
 ```
-git clone https://github.com/kpholloway/cfb27-prospect-census
+git clone https://github.com/kph060908/cfb27-prospect-census
 cd cfb27-prospect-census
 python -m venv .venv
 ```
