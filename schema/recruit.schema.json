@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/kpholloway/cfb27-prospect-census/schema/recruit.schema.json",
+  "title": "One line of recruits.jsonl (cfb27-prospect-census/1)",
+  "type": "object",
+  "required": ["national_rank", "state_rank", "position_rank", "first_name", "last_name", "stars", "position",
+               "archetype", "class", "expected_nil", "height_in", "weight_lb", "hometown", "position_list", "card",
+               "reads"],
+  "properties": {
+    "national_rank": {"type": "integer", "minimum": 1},
+    "state_rank": {"type": "integer", "minimum": 1},
+    "position_rank": {"type": "integer", "minimum": 1},
+    "first_name": {"type": "string", "minLength": 1},
+    "last_name": {"type": "string", "minLength": 1},
+    "stars": {"type": "integer", "minimum": 1, "maximum": 5},
+    "position": {"enum": ["QB", "QB (R)", "QB (L)", "HB", "FB", "WR", "TE", "LT", "RT", "LG", "RG", "C", "LEDG",
+                          "REDG", "DT", "SAM", "WILL", "MIKE", "CB", "FS", "SS", "K", "P", "ATH"]},
+    "archetype": {"type": "string", "minLength": 1},
+    "class": {"enum": ["HS", "JC (FR)", "JC (SO)", "JC (JR)", "JC (SR)"]},
+    "expected_nil": {"type": ["integer", "null"], "minimum": 0},
+    "height_in": {"type": "integer", "minimum": 60, "maximum": 90},
+    "weight_lb": {"type": "integer", "minimum": 120, "maximum": 420},
+    "hometown": {"type": "string", "pattern": "^[A-Z][^,]*, (AL|AK|AZ|AR|CA|CO|CT|DE|FL|GA|HI|ID|IL|IN|IA|KS|KY|LA|ME|MD|MA|MI|MN|MS|MO|MT|NE|NV|NH|NJ|NM|NY|NC|ND|OH|OK|OR|PA|RI|SC|SD|TN|TX|UT|VT|VA|WA|WV|WI|WY)$"},
+    "position_list": {"enum": ["QB", "HB", "FB", "WR", "TE", "OT", "OG", "C", "EDGE", "DT", "OLB", "MIKE", "CB", "FS",
+                               "SS", "K", "P", null]},
+    "card": {"type": "string"},
+    "reads": {"type": "integer", "minimum": 1},
+    "fixes": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}
