@@ -3,6 +3,31 @@
 Capture every recruit on an EA SPORTS College Football 27 online dynasty's **Prospect List** (the whole incoming
 class, 4,100 recruits) into a fixed, checked data format, with an AI agent doing the work.
 
+## Weekly giveaway
+
+Every week one entered class is drawn at random. The winner gets the hidden ratings of every recruit in their class:
+true OVR, dev trait and gem or bust for all 4,100, as a JSON file and a spreadsheet. The class is also featured in a
+short video on TikTok, [@zero_to_hero_cfb](https://www.tiktok.com/@zero_to_hero_cfb).
+
+**To enter:**
+
+1. Capture your class with this tool ([How to use it](#how-to-use-it), below).
+2. Open a [giveaway entry](https://github.com/kph060908/cfb27-prospect-census/issues/new?template=giveaway-entry.yml)
+   and drag your zip into it. You need a free GitHub account.
+
+**The draw:**
+
+- Every Sunday, one open entry is picked at random by [giveaway/draw.py](giveaway/draw.py). [DRAWS.md](DRAWS.md) logs
+  each draw: the date, every entry in it, and the winner.
+- One entry per league class. If two people enter the same league's class, the earlier entry counts.
+- The winner is told on their entry. The file is linked there, and the link comes down once you say you have it.
+- An entry stays in every week until it's drawn or you close it. Your class is worth the most before National
+  Signing Day.
+
+**Rules:** free, with nothing to buy. Entries and their zips are public. An entry whose capture fails the tool's
+checks can be turned down. The only official account is @zero_to_hero_cfb, and nobody from this project will ask you
+for money, passwords or your console login.
+
 ## How to use it
 
 1. Open an AI agent that can run commands and read files on the computer where you see the game (a coding agent
@@ -23,7 +48,7 @@ class, 4,100 recruits) into a fixed, checked data format, with an AI agent doing
    - asks you to scroll the lists while it records every card.
 
    It reads every card, checks the class is complete, and writes a zip.
-4. Send the zip to whoever asked you for the capture.
+4. Send the zip to whoever asked you for the capture, or enter it in the [weekly giveaway](#weekly-giveaway).
 
 ## What you need
 

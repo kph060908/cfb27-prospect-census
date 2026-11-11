@@ -90,7 +90,8 @@ def parse_card(img: Image.Image) -> dict:
     try:
         top = sorted([b for b in boxes if b[2] < 85], key=lambda b: (b[2], b[1]))
         first = [b for b in top if b[2] < 25 and b[4] <= 45]
-        last = [b for b in top if 25 <= b[2] < 60 and b[4] < 95 and "NAT" not in b[0].upper()]
+        # skip the rank line ("NAT: 538 |"), not a surname holding NAT (Fortunato, Abernathy, Onatolu)
+        last = [b for b in top if 25 <= b[2] < 60 and b[4] < 95 and not re.search(r"N[A4]T\s*:", b[0], re.I)]
         k["first"] = " ".join(b[0] for b in sorted(first, key=lambda b: b[1]))
         k["last"] = " ".join(b[0] for b in sorted(last, key=lambda b: b[1]))
         rk = " ".join(b[0] for b in boxes if 80 <= (b[2] + b[4]) / 2 <= 112)

@@ -1,0 +1,68 @@
+name: Giveaway entry
+description: Enter your league's recruit class in the weekly random draw.
+title: "[Entry] "
+labels: ["entry"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Capture your class with this tool first (see the README), then fill this in and drag your zip into the box below.
+        Every week one entry is drawn at random. The draw and the rules are in the README; every draw is logged in DRAWS.md.
+
+        **This issue and your zip are public.** The zip holds what the recruit cards show, your league's name, your team
+        and your platform. Nothing else.
+  - type: input
+    id: league
+    attributes:
+      label: League name
+      description: The name in your capture (capture.json, "league").
+    validations:
+      required: true
+  - type: input
+    id: team
+    attributes:
+      label: Team
+      description: The team you coach in that league.
+    validations:
+      required: true
+  - type: input
+    id: class_year
+    attributes:
+      label: Class year
+      description: The recruit class you captured, for example 2029.
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - PS5
+        - Xbox Series X|S
+        - PC
+    validations:
+      required: true
+  - type: textarea
+    id: capture
+    attributes:
+      label: Your capture zip
+      description: Drag the zip the tool wrote into this box (about 200 KB). One zip per entry.
+      placeholder: Drag the .zip here
+    validations:
+      required: true
+  - type: input
+    id: tiktok
+    attributes:
+      label: TikTok handle (optional)
+      description: Only if you want a shout-out when your class is featured. Leave it blank to stay anonymous.
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Before you enter
+      options:
+        - label: I captured this class from my own seat in this league.
+          required: true
+        - label: If my entry is drawn, my class can be featured in a video. My team name may be shown; my league name and GitHub name won't be, and my TikTok handle only if I gave it above.
+          required: true
+        - label: I understand this issue and its zip are public, and that nobody from this project will ever ask me for money, passwords or my console login.
+          required: true
